@@ -32,7 +32,7 @@ TEST(PIDController, TestGainChange) {
 TEST(PIDController, TestPIDError) {
   std::shared_ptr<PIDController> testPID;
   testPID = std::make_shared<PIDController>(1, 1, 1);
-  double dummy = testPID->ComputeVelocity(7, 5);
+  ASSERT_GE(testPID->ComputeVelocity(7, 5),0);
   testPID->ResetPIDErrors();
   std::vector<double> testErrors = testPID->GetPIDErrors();
   ASSERT_EQ(0, testErrors[0]);
