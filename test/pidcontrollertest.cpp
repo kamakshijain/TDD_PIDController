@@ -32,7 +32,7 @@ TEST(PIDController, TestGainChange) {
 TEST(PIDController, TestPIDError) {
   std::shared_ptr<PIDController> testPID;
   testPID = std::make_shared<PIDController>(1, 1, 1);
-  ASSERT_GE(testPID->ComputeVelocity(7, 5),0);
+  ASSERT_GE(testPID->ComputeVelocity(7, 5), 0);
   testPID->ResetPIDErrors();
   std::vector<double> testErrors = testPID->GetPIDErrors();
   ASSERT_EQ(0, testErrors[0]);
@@ -42,7 +42,8 @@ TEST(PIDController, TestPIDError) {
 
 /**
  * @brief This is to test whether the compute velocity gives
- *        correct output after running for 3 iterations
+ *        correct output after running for 3 iterations and
+ *        Info is displayed
  */
 TEST(PIDControllerTest, TestCorrectVelocity) {
   std::shared_ptr<PIDController> testPID;
@@ -51,6 +52,7 @@ TEST(PIDControllerTest, TestCorrectVelocity) {
   ASSERT_NEAR(testPID->ComputeVelocity(7, 6), 10.4, 0.0001);
   ASSERT_NEAR(testPID->ComputeVelocity(7, 7), 10.3, 0.0001);
   ASSERT_NEAR(testPID->ComputeVelocity(7, 8), 8.0, 0.0001);
+  ASSERT_TRUE(testPID->DisplayPIDInfo());
 }
 
 /**
