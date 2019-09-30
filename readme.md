@@ -1,4 +1,4 @@
-# C++ Boilerplate
+# C++ PIDController
 
 [![Build Status](https://travis-ci.org/kamakshijain/TDD_PIDController.svg?branch=master)](https://travis-ci.org/kamakshijain/TDD_PIDController)
 
@@ -63,7 +63,7 @@ cd ~/workspace
 git clone --recursive https://github.com/kamakshijain/TDD_PIDController.git
 ```
 
-In your work directory, use cmake to create an Eclipse project for an [out-of-source build] of cpp-boilerplate
+In your work directory, use cmake to create an Eclipse project for an [out-of-source build] of TDD-PIDController
 
 ```
 cd ~/workspace
