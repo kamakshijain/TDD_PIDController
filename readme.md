@@ -1,14 +1,33 @@
 # C++ Boilerplate
-[![Build Status](https://travis-ci.org/dpiet/cpp-boilerplate.svg?branch=master)](https://travis-ci.org/dpiet/cpp-boilerplate)
-[![Coverage Status](https://coveralls.io/repos/github/dpiet/cpp-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/dpiet/cpp-boilerplate?branch=master)
+[![Build Status](https://travis-ci.org/rohansingh42/cpp-boilerplate.svg?branch=master)](https://travis-ci.org/rohansingh42/cpp-boilerplate)
+[![Coverage Status](https://coveralls.io/repos/github/rohansingh42/cpp-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/rohansingh42/cpp-boilerplate?branch=master)
 ---
+
+## Authors
+### Part 1
+- **Driver** : Kamakshi Jain 
+- **Navigator** : Rohan Singh
+
+### Part 2
+- **Driver** : Rohan Singh
+- **Navigator** : Kamakshi Jain
 
 ## Overview
 
-Simple starter C++ project with:
+Test Driven development for PID controller designed for Acme Robotics.
 
-- cmake
-- googletest
+## TODO
+
+- [.] Update Readme with badges
+- [.] Create UML Diagrams
+- [.] Implement Class PIDController declaration
+- [.] Update CmakeLists
+- [.] Create Unit tests for class PIDController
+- [ ] Write function definitions for class PIDController
+- [ ] Write main.cpp to demonstrate class functionality
+- [ ] Make sure project builds
+- [ ] Submit pull request
+
 
 ## Standard install via command-line
 ```
