@@ -7,7 +7,15 @@
 
 #include "pidcontroller.hpp"
 
+PIDController::PIDController() {
+}
 
+PIDController::PIDController(double kp, double ki, double kd) {
+}
+
+PIDController::~PIDController() {
+}
+ 
 double PIDController::ComputeVelocity(double targetSetpoint, double actual) {
   return 0.0;
 }
@@ -17,14 +25,16 @@ double PIDController::RestrictVelocityRate(double velocityRate) {
 }
 
 std::vector<double> PIDController::GetPIDGains() {
-  return std::vector<double> t{0,0,0};
+  std::vector<double> t{0,0,0};
+  return t;
 }
 
 void PIDController::SetPIDGains(double kp, double ki, double kd){
 }
 
 std::vector<double> PIDController::GetPIDErrors() {
-  return std::vector<double> t{0,0,0};
+  std::vector<double> t{0,0,0};
+  return t;
 }
 
 void PIDController::ResetPIDErrors() {
