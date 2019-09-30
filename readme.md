@@ -11,8 +11,8 @@
 - **Navigator** : Rohan Singh
 
 ### Part 2
-- **Driver** : Rohan Singh
-- **Navigator** : Kamakshi Jain
+- **Driver** : Suyash Yeotikar
+- **Navigator** : Prasheel Renkuntla
 
 ## Overview
 
@@ -25,10 +25,10 @@ Test Driven development for PID controller designed for Acme Robotics.
 - [x] Implement Class PIDController declaration
 - [x] Update CmakeLists
 - [x] Create Unit tests for class PIDController
-- [ ] Write function definitions for class PIDController
-- [ ] Write main.cpp to demonstrate class functionality
-- [ ] Make sure project builds
-- [ ] Submit pull request
+- [x] Write function definitions for class PIDController
+- [x] Write main.cpp to demonstrate class functionality
+- [x] Make sure project builds
+- [x] Submit pull request
 
 
 ## Standard install via command-line
