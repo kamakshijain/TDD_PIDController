@@ -15,12 +15,12 @@
 TEST(PIDController, TestGainChange) {
   std::shared_ptr <PIDController> testPID;
   testPID = std::make_shared <PIDController> ();
-  std::vector<double> testGains = testPID->getPIDGains();
+  std::vector<double> testGains = testPID->GetPIDGains();
   ASSERT_EQ(0, testGains[0]);
   ASSERT_EQ(0, testGains[1]);
   ASSERT_EQ(0, testGains[2]);
-  testPID->setPIDGains(2.2, 4.4, 6.6);
-  testGains = testPID->getPIDGains();
+  testPID->SetPIDGains(2.2, 4.4, 6.6);
+  testGains = testPID->GetPIDGains();
   ASSERT_EQ(2.2, testGains[0]);
   ASSERT_EQ(4.4, testGains[1]);
   ASSERT_EQ(6.6, testGains[2]);
@@ -34,7 +34,7 @@ TEST(PIDController, TestPIDError) {
   testPID = std::make_shared<PIDController>(1, 1, 1);
   double dummy = testPID->ComputeVelocity(7, 5);
   testPID->ResetPIDErrors();
-  std::vector<double> testErrors = testPID->getPIDErrors();
+  std::vector<double> testErrors = testPID->GetPIDErrors();
   ASSERT_EQ(0, testErrors[0]);
   ASSERT_EQ(0, testErrors[1]);
   ASSERT_EQ(0, testErrors[2]);
