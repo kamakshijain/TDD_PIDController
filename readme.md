@@ -30,6 +30,11 @@ Test Driven development for PID controller designed for Acme Robotics.
 - [x] Make sure project builds
 - [x] Submit pull request
 
+## Minutes of Meeting
+- As our travis was not going through the DisplayPIDInfo function, our Coverall was not 100%
+- Added a test case for function DisplayPIDInfo.
+
+
 
 ## Standard install via command-line
 ```
