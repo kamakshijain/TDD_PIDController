@@ -1,6 +1,8 @@
 # C++ Boilerplate
+
 [![Build Status](https://travis-ci.org/kamakshijain/TDD_PIDController.svg?branch=master)](https://travis-ci.org/kamakshijain/TDD_PIDController)
-[![Coverage Status](https://coveralls.io/repos/github/kamakshijain/ TDD_PIDController/badge.svg?branch=master)](https://coveralls.io/github/kamakshijain/ TDD_PIDController?branch=master)
+
+[![Coverage Status](https://coveralls.io/repos/github/kamakshijain/TDD_PIDController/badge.svg?branch=master)](https://coveralls.io/github/kamakshijain/TDD_PIDController?branch=master)
 ---
 
 ## Authors
