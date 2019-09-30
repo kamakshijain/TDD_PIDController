@@ -1,6 +1,6 @@
 # C++ Boilerplate
-[![Build Status](https://travis-ci.org/rohansingh42/cpp-boilerplate.svg?branch=master)](https://travis-ci.org/rohansingh42/cpp-boilerplate)
-[![Coverage Status](https://coveralls.io/repos/github/rohansingh42/cpp-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/rohansingh42/cpp-boilerplate?branch=master)
+[![Build Status](https://travis-ci.org/kamakshijain/cpp-boilerplate.svg?branch=master)](https://travis-ci.org/kamakshijain/cpp-boilerplate)
+[![Coverage Status](https://coveralls.io/repos/github/kamakshijain/cpp-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/kamakshijain/cpp-boilerplate?branch=master)
 ---
 
 ## Authors
