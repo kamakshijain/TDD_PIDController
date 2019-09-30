@@ -94,7 +94,7 @@ class PIDController {
     *        Displays the Current, Target, and Output Velocity, the gains and the errors
     * @return Void
     */
-    void DisplayPIDInfo();
+    bool DisplayPIDInfo();
 
  private:
     double kp;                   // Proportional Gain

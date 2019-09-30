@@ -39,6 +39,6 @@ std::vector<double> PIDController::GetPIDErrors() {
 void PIDController::ResetPIDErrors() {
 }
 
-void PIDController::DisplayPIDInfo() {
+bool PIDController::DisplayPIDInfo() {
 }
 
