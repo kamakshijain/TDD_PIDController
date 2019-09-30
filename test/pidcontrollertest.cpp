@@ -1,0 +1,66 @@
+/** @file pidcontrollertest.cpp
+* @brief Tests for PID Controller
+* @author Kamakshi Jain, Rohan Singh
+* @copyright  : This code is developed for the course ENPM808X.
+*/
+#include <gtest/gtest.h>
+#include <memory>
+#include <vector>
+#include "pidcontroller.hpp"
+
+/**
+ * @brief Test to check functionality of get and set functions for gains.
+ * Also checks for correct default parameter initialization.
+ */
+TEST(PIDController, testGainChange) {
+  std::shared_ptr <PIDController> testPID;
+  testPID = std::make_shared <PIDController> ();
+  std::vector<double> testGains = testPID.getPIDGains();
+  ASSERT_EQ(0, testGains[0]);
+  ASSERT_EQ(0, testGains[1]);
+  ASSERT_EQ(0, testGains[2]);
+  testPID.setPIDGains(2.2, 4.4, 6.6);
+  testGains = testPID.getPIDGains();
+  ASSERT_EQ(2.2, testGains[0]);
+  ASSERT_EQ(4.4, testGains[1]);
+  ASSERT_EQ(6.6, testGains[2]);
+}
+
+/**
+ * @brief Test to check functionality of get and reset functions for error.
+ */
+TEST(PIDController, testPIDError) {
+  std::shared_ptr<PIDController> testPID;
+  testPID = std::make_shared<PIDController>(1, 1, 1);
+  double dummy = testPID.ComputeVelocity(7, 5);
+  testPID.ResetPIDErrors();
+  std::vector<double> testErrors = testPID.getPIDErrors();
+  ASSERT_EQ(0, testErrors[0]);
+  ASSERT_EQ(0, testErrors[1]);
+  ASSERT_EQ(0, testErrors[2]);
+}
+
+/**
+ * @brief This is to test whether the compute velocity gives
+ *        correct output after running for 3 iterations
+ */
+TEST(PIDControllerTest, testCorrectVelocity) {
+  std::shared_ptr<PIDController> testPID;
+  testPID = std::make_shared<PIDController>(1.1, 2.2, 3.3);
+  ASSERT_NEAR(testPID->ComputeVelocity(7, 5), 18.2, 0.0001);
+  ASSERT_NEAR(testPID->ComputeVelocity(7, 6), 10.4, 0.0001);
+  ASSERT_NEAR(testPID->ComputeVelocity(7, 7), 10.3, 0.0001);
+  ASSERT_NEAR(testPID->ComputeVelocity(7, 8), 8.0, 0.0001);
+}
+
+/**
+ * @brief Test for ensuring Control Output is within min-max
+ *        velocity rate range
+ */
+TEST(PIDControllerTest, testVelocityRange) {
+  std::shared_ptr<PIDController> testPID;
+  testPID = std::make_shared<PIDController>(10, 10, 10);
+  ASSERT_LE(testPID->ComputeVelocity(100, 0), 100);
+  testPID = std::make_shared<PIDController>(10, 10, 10);
+  ASSERT_GE(testPID->ComputeVelocity(-100, 0), -100);
+}
