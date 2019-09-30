@@ -18,11 +18,11 @@ Test Driven development for PID controller designed for Acme Robotics.
 
 ## TODO
 
-- [.] Update Readme with badges
-- [.] Create UML Diagrams
-- [.] Implement Class PIDController declaration
-- [.] Update CmakeLists
-- [.] Create Unit tests for class PIDController
+- [x] Update Readme with badges
+- [x] Create UML Diagrams
+- [x] Implement Class PIDController declaration
+- [x] Update CmakeLists
+- [x] Create Unit tests for class PIDController
 - [ ] Write function definitions for class PIDController
 - [ ] Write main.cpp to demonstrate class functionality
 - [ ] Make sure project builds
